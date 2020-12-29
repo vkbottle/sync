@@ -52,9 +52,9 @@ def sync_reformat(file_path: str, alt_path: str, contents: dict):
 
 def build(setup_kwargs: dict):
     contents = {
-        "abc_framework": open("sync_replacements/abc_framework.py").readlines(),
-        "bot": open("sync_replacements/bot.py").readlines(),
-        "client_alt": open("sync_replacements/client.py").read(),
+        "abc_framework": open("replacements/abc_framework.py").readlines(),
+        "bot": open("replacements/bot.py").readlines(),
+        "client_alt": open("replacements/client.py").read(),
     }
 
     git.Repo.clone_from("https://github.com/timoniq/vkbottle.git", "vkbottle_repo")
